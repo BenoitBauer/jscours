@@ -65,8 +65,8 @@ const jeSuisFaux = false;
 
 const eleves = ["Autruche", "Joconde", 4, true];
 console.log(eleves)
-console.loge(leves[2])
-console.loge(leves[4]) // undefined, on sort des limites du tableau.
+console.log(eleves[2])
+console.log(eleves[4]) // undefined, on sort des limites du tableau.
 // Les tableaux n'ont pas d'indedx négatifs.
 // Les tableaux commencent toujours par l'index 0 et fini toujours pas l'index égale à la taille du tableau - 1
 
@@ -92,4 +92,115 @@ const tasse = {
     price: 1,
     content_volume: 25,
 }
+
+const eleve = {
+    name: "Jean-Michel",
+    age: 18,
+    class: "Terminal",
+    notes: [13, 18, 19, 2, 16, 15.5]
+
+}
+
+console.log(eleve.name)
+// Calcul de la moyenne de Jean-Michel, en codage naîf.
+let moyenne = (eleve.notes[0] + eleve.notes[1] +  eleve.notes[2] +  eleve.notes[3] + eleve.notes[4] + eleve.notes[5]) / 6
+console.log(moyenne)
+
+
+// OPERATEUR
+
+// l'affectation
+
+// On donne la valeur de 7 à variable "aa"
+
+let aa = 7 
+
+// l'addition
+
+// La valeur 7 est écraser par l'additionne 12 + 4 donc la variabke aa = 16
+
+aa = 12 + 4;
+console.log(aa)
+// l'affectation après addition
+// avec cette écriture on écrase pas la valeur mais on ajoute 4 à l'ancienne valeur
+aa += 4;
+console.log(aa); // donne 20
+
+// la soustraction
+
+
+bb = 12 - 4;
+console.log(bb)
+// l'affectation après soustraction
+// avec cette écriture on écrase pas la valeur mais on retire 4 à l'ancienne valeur
+bb -= 4;
+console.log(bb); // donne 12
+
+// la multiplication
+
+
+cc = 12 * 4;
+console.log(cc)
+// l'affectation après multiplication
+// avec cette écriture on écrase pas la valeur mais on ajoute 4 à l'ancienne valeur
+cc *= 2;
+console.log(cc); // donne 80
+
+// la division
+
+dd = 20 / 4;
+console.log(dd)
+// l'affectation après multiplication
+// avec cette écriture on écrase pas la valeur mais on ajoute 4 à l'ancienne valeur
+dd /= 2;
+console.log(dd); // donne 2.5
+
+// les modulo
+
+let ee = 13 % 5
+console.log(ee) // donne 3
+
+// les exponentiels
+
+let ff = 3**2;
+console.log(ff) // 9
+
+// les conditions
+
+let gg = 4;
+let hh = 4;
+let ii = 9; 
+
+if (gg == hh) {
+    // si la condition est bien rempli
+}else{
+  // si la condition n'est pas rempli
+}
+
+// égalité non strict
+
+if ( 6 == "6") {
+    console.log("ça marchre");
+}
+
+// égalité strict
+// l'égalité strict varie en plus le type de données
+// ici l'égalité est fausse car 6 est un number et "6" est une chaine de caractere
+if ( 6 === "6") {
+   ///////////////////
+}else{
+    console.log("ça marchera pas")
+}
+
+
+/// On va vérifier si Jean-Michel est majeur
+if(eleve.age >= 18){
+    // ici on va faire la concaténation (coller plusieurs chaines de caractères entre elles)
+    // avec le nom de l'élève et un texte descriptif
+    console.log(eleve.name + " est bien majeur")
+}else{
+    // Ici concaténation de litteral de gabarit
+    console.log(`${eleve.name} n'est pas majeur`)
+}
+
 
