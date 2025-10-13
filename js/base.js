@@ -46,8 +46,8 @@ console.log(k);
 let q = 2; // nombre entier
 let p = 45.32 // nombre à virgule flottant
 let r = -273.15; // nombre négatif
-let s = 1/3; // fraction
-let t = 16_000 
+let s = 1 / 3; // fraction
+let t = 16_000
 
 // Les chaines de caratères = les string
 
@@ -103,7 +103,7 @@ const eleve = {
 
 console.log(eleve.name)
 // Calcul de la moyenne de Jean-Michel, en codage naîf.
-let moyenne = (eleve.notes[0] + eleve.notes[1] +  eleve.notes[2] +  eleve.notes[3] + eleve.notes[4] + eleve.notes[5]) / 6
+let moyenne = (eleve.notes[0] + eleve.notes[1] + eleve.notes[2] + eleve.notes[3] + eleve.notes[4] + eleve.notes[5]) / 6
 console.log(moyenne)
 
 
@@ -113,7 +113,7 @@ console.log(moyenne)
 
 // On donne la valeur de 7 à variable "aa"
 
-let aa = 7 
+let aa = 7
 
 // l'addition
 
@@ -162,45 +162,186 @@ console.log(ee) // donne 3
 
 // les exponentiels
 
-let ff = 3**2;
+let ff = 3 ** 2;
 console.log(ff) // 9
 
 // les conditions
 
 let gg = 4;
 let hh = 4;
-let ii = 9; 
+let ii = 9;
 
 if (gg == hh) {
     // si la condition est bien rempli
-}else{
-  // si la condition n'est pas rempli
+} else {
+    // si la condition n'est pas rempli
 }
 
 // égalité non strict
 
-if ( 6 == "6") {
+if (6 == "6") {
     console.log("ça marchre");
 }
 
 // égalité strict
 // l'égalité strict varie en plus le type de données
 // ici l'égalité est fausse car 6 est un number et "6" est une chaine de caractere
-if ( 6 === "6") {
-   ///////////////////
-}else{
+if (6 === "6") {
+    ///////////////////
+} else {
     console.log("ça marchera pas")
 }
 
 
 /// On va vérifier si Jean-Michel est majeur
-if(eleve.age >= 18){
+if (eleve.age >= 18) {
     // ici on va faire la concaténation (coller plusieurs chaines de caractères entre elles)
     // avec le nom de l'élève et un texte descriptif
     console.log(eleve.name + " est bien majeur")
-}else{
+} else {
     // Ici concaténation de litteral de gabarit
     console.log(`${eleve.name} n'est pas majeur`)
 }
 
+// Révision
 
+const vitesseDeLaLumiere = 299_792_458; // Constante dans le vide
+const table = [1, 2, 3]
+table.push(4)
+console.log(table)
+
+const ingredients = []; // tableau vide que l'on remplira plus tard
+
+// icic on va fabriquer un plan qui permettre de construire plus simplement les ingédients
+// on apelle ça en js le prototypage
+
+
+class Ingredient {
+    constructor(nom, unite, quantite) {
+        this.nom = nom;
+        this.unite = unite;
+        this.quantite = quantite;
+    }
+}
+
+class Recettes {
+    constructor(nom_recette, nbr_personnes, etapes, liste_ingredients) {
+        this.nom_recette = nom_recette;
+        this.nbr_personne = nbr_personnes;
+        this.etape = etapes;
+        this.liste_ingredients = liste_ingredients;
+    }
+}
+
+
+const sucreDeCanne = new Ingredient("Sucre de Canne", "g", 75);
+const lait = new Ingredient("Lait", "cl", 25);
+const oeuf = new Ingredient("oeuf", "oeuf(s)", 3);
+const pain = new Ingredient("pain", "tranche(s) de pain", 6);
+console.log(sucreDeCanne)
+
+// je vais donc mettre mes ingredients dans le tableau ingredients
+
+ingredients.push(sucreDeCanne, lait, oeuf, pain);
+console.log(ingredients)
+
+// on va faire notre recette
+const etapes = ["Fouetter les oeufs avec le sucre et le lait.", "Y tremper les tranches de pain.", "Deux solutions pour la cuisson : les cuire à la poêle dans du beurre en les faisant dorer de chaque côté, ou, les cuire au four : beurrer légèrement un plat à gratin, y répartir les tranches, verser le reste du mélange (ajouter du sucre si envie), laisser cuire à 180°C (thermostat 6) jusqu'à que les tranches soient dorées."]
+
+
+const painPerdu = new Recettes("Pain Perdu", 4, etapes, ingredients)
+console.log(painPerdu)
+
+
+// LES BOUCLES
+
+
+console.log("Coucou !")
+console.log("Coucou !")
+console.log("Coucou !")
+console.log("Coucou !")
+console.log("Coucou !")
+
+// imaginons que j'ai besoin d'écrire dans un console.log
+//0 patate(0) à 2000 patate
+//allons nous écrire à la main 2001 console.log ?
+// non ! nous allons utiliser une boucle
+// et pour cette exemple nous allons utiliser la boucle for.
+
+for (let i = 0; i <= 2000; i++) {
+    console.log(i + " patate's");
+}
+
+// Boucle while
+
+let n = 0;
+while(n < 6) {
+    console.log(n + " * 5 est égal à " + n * 5);
+    n++
+}
+
+// Exercice
+// Utiliser un boucle while pour generer 10 nombre aleatoires
+// complris entre 0 et 100, puis les afficher dans la console
+
+let zz = 0;
+while(zz < 10) {
+    console.log(Math.random()* (100 - 1))
+    zz++
+}
+
+// do while
+
+//let password;
+//do {
+ //   password = prompt("Entrer le MDP !");
+//} while (password !== "abc123")
+//console.log("Tu à trouver le MDP !");
+
+// Exo
+// On simule un lancer de dé qui continue jusqu'a ce que le joueur obtienne 6. On ne peux pas savoir combien de fois à l'avance qu'il faudra executer la boucle.
+
+let des;
+do {
+    des = Math.floor(Math.random()* 7)
+    console.log(des)
+} while (des !== 6)
+console.log("Tu à trouver le dés magique!");
+
+// boucle for
+// compteur
+
+for (let i = 0; i < 5; i++){
+    console.log("Compteur : " + i);
+}
+
+// Boucle for -> traverser les tableaux
+
+let voitures = ["Dacie", "Lada", "Audi", "Daihatsu", "Toyota", "Chevrolet"]
+
+for (let i = 0; i < voitures.length; i++){
+    console.log(voitures[i])
+}
+
+//a boucle For...of
+
+let fruits = ["la Pomme", "la Banane", "le Kiwi", "l'Avocat", "le Duriant"];
+for (let fruit of fruits) {
+    console.log('j\aime :' + fruit)
+}
+
+
+// exo
+
+const gafam = ["Google", "Amazon", "Facebook", "Apple", "Microsoft"];
+
+const container = document.getElementById("container");
+const ul = document.createElement("ul")
+container.appendChild(ul)
+
+
+for (let brand of gafam){
+    const li = document.createElement("li")
+    li.innerHTML = brand
+    ul.appendChild(li)
+}
