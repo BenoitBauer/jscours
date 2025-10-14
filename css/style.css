@@ -47,3 +47,7 @@ button:hover {
     background-color: rgb(116, 142, 228);
     cursor: pointer;
 }
+
+.cyan {
+color: cyan;
+}
