@@ -72,4 +72,29 @@ img.style.height = "auto";
 
 mom.appendChild(img)
 
+// Recuperer les class
+
+// Methode deconseiller
+
+//const pokemons = document.getElementByClassName("pokemons");
+//console.log(pokemons[0])
+
+const pokemons = document.querySelectorAll('.pokemons');
+// Si on sait qu'il y a que 1 élément on peu utiliser
+// queryselector prendra uniquement le 1er element avec ce nom de class
+const listPokemon = document.querySelector('.list-pokemon')
+console.log(pokemons[0])
+console.log(listPokemon)
+const colorPokemeon = ["#ebae34", "#f5b0d7", "#f5bf82", "#d2faac", "#d7c5d9"];
+for (let i = 0; i < colorPokemeon.length; i++) {
+    pokemons[i].style.color = colorPokemeon[i]
+}
+
+// Ajouter une class 
+// element.classList(nom de la class)
+//Enlever une class
+//element.classList.remove(nom de la class)
+//Basculer de class
+//element.classList.toggle(nom de la class)
+
 
