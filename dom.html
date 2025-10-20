@@ -9,7 +9,8 @@
     <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
     <title>Le DOM</title>
 </head>
-<body>
+<!-- A éviter si possible merci. -->
+<body style="height: 2000vh;">
 
     <main>
            <h1>Le DOM ou le DOCUMENT OBJECT MODEL</h1>
@@ -74,7 +75,59 @@ for (let i = 0; i < colorPokemeon.length; i++) {
 //element.classList.toggle(nom de la class)
             </code>
          </pre>
+
+         <h2>SetTimeOut () et SetInterval()</h2>
+         <h3>SetTimeOut()</h3>
+         <P>Ca execute une fonction une seule fois apres un certain temps</P>
+
+                <pre class="line-numbers">
+            <code class="language-javascript">
+         
+                setTimeout(function(){
+                     console.log("3 secondes se sont écoulées !")
+                }, 3000)
+
+            </code>
+         </pre>
+
+         <h3>SetInterval()</h3>
+         <p>execute une fonction de manière repetée à intervalle regulier</p>
+
+                  <pre class="line-numbers">
+            <code class="language-javascript">
+         
+               setInterval(function(){
+                    console.log("Une seconde viens de passées !")
+                }, 1000)
+
+            </code>
+         </pre>
+
+         <h3>clearTimeout() et clearInterval()</h3>
+         <p>POur pouvoir supprimer vos timers, il faudra les mettre dans une variable</p>
+
+                 <pre class="line-numbers">
+            <code class="language-javascript">
+         
+             
+                const timer = setTimeout(function(){
+    console.log("3 secondes se sont écoulées !")
+}, 3000)
+
+clearTimeout(timer) //c'est plus interessant dans un événement
+
+const interval = setInterval(function(){
+    console.log("3 secondes se sont écoulées !")
+}, 3000)
+
+clearInterval(interval) //c'est plus interessant dans un événement
+
+            </code>
+         </pre>
+
     </main>
+
+
  
     
 </body>

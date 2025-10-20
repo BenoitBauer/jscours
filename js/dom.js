@@ -97,4 +97,98 @@ for (let i = 0; i < colorPokemeon.length; i++) {
 //Basculer de class
 //element.classList.toggle(nom de la class)
 
+// SetTimeOut
+
+//setTimeout(function(){
+   // console.log("3 secondes se sont écoulées !")
+//}, 3000)
+
+// SetInterval
+
+//setInterval(function(){
+  //  console.log("Une seconde viens de passées !")
+//}, 1000)
+
+const timer = setTimeout(function (){
+    console.log("3 secondes se sont écoulées !")
+}, 3000)
+
+clearTimeout(timer) //c'est plus interessant dans un événement
+
+const interval = setInterval(function (){
+    console.log("3 secondes se sont écoulées !")
+}, 3000)
+
+clearInterval(interval) //c'est plus interessant dans un événement
+
+// TP LE SCROLL TAQUIN
+
+const punchlines = [
+  "Tu descends plus lentement qu’une mise à jour Windows 🐌",
+  "Allez, on se réveille… le bas de la page va pas venir tout seul ! 😴",
+  "Tu veux un café pour te motiver ou c’est une stratégie de flemme ? ☕",
+  "Je pourrais tricoter un pull pendant que tu scrolles… 🧶",
+  "C’est un concours de lenteur ou tu fais ça exprès ? 😅",
+  "Encore un effort, c’est pas le Mont Everest non plus ⛰️",
+  "Allez courage, même les tortues ont des objectifs ! 🐢",
+  "Tu scrolles comme si tu voulais pas savoir la fin 📜",
+  "Je vois plus de poussière que de progrès 👀",
+  "On dirait que tu scrolles avec les coudes 🦾",
+  "Si tu vas plus lentement, on va repartir en 2022… ⏳",
+  "Il y a des glaciers qui fondent plus vite que toi 🌍",
+  "Même une limace sous calmants serait déjà arrivée 🐌",
+  "Tu veux qu’on t’applaudisse pour chaque pixel descendu ? 👏",
+  "Tu scrolles en morse ou c’est ton style naturel ? 🧠",
+  "Je me demande si t’as pas mis une brique sur la barre d’espace 🤔",
+  "T’as le même rythme qu’un fax sous la pluie 📠",
+  "On est sur une promenade digestive ou un vrai scroll ? 🍽️",
+  "Tu vas finir par t'endormir avant d’y arriver 😴",
+  "Il faut que je t’envoie une newsletter pour te motiver ? 📬",
+  "Tu scrolles comme si tu testais chaque pixel à la main 🧐",
+  "Courage, t’es à deux doigts d’arriver au milieu ! (ou pas...) 😇",
+  "Même la barre de chargement d'Internet Explorer est jalouse de ta lenteur 💻",
+  "Faut-il t’envoyer une carte au trésor pour trouver le bas ? 🗺️",
+  "Si tu scrolles encore plus doucement, je vais devoir appeler ta maman 👩‍👦"
+];
+
+let intervalid = null;
+
+// fonction qui va vérifier si nous sommes en bas de la page.
+function isAtTheBottomOfThePage(){
+    // window.innerHeight => correspond à la taille en pixel de votre écran
+    // window.scrollY => la possition du scroll par rapport à la taille maximale de l'écran
+    // document.body.scrollHeight => c'est nos 2000 vh converties en pixel
+    // le -10 est une tolerence
+    return window.innerHeight + window.scrollY >= document.body.scrollHeight - 10;
+}
+
+function startPunchlines() {
+    if (intervalid === null){
+        intervalid = setInterval(function(){
+            if (! isAtTheBottomOfThePage()){ // tant qu'on est pas en bas de la page 
+                // il doit m'envoyer une insulte au hasard parmis les lignes tableaux
+                const punchline = punchlines [Math.floor (Math.random() * punchlines.length)];
+                console.log(punchlines)
+            }else{
+                console.log("Super champion ta reussi !!!")
+                // fonction qui arette le chrono
+                stopPunchlines()
+            }
+        }, 1000)
+    }
+}
+
+function stopPunchlines(){
+    clearInterval(intervalid)
+    intervalid = null;
+}
+
+startPunchlines();
+
+
+
+
+
+
+
 

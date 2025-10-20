@@ -1,0 +1,142 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  margin: 40px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.barre {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.nom {
+  width: 150px;
+  padding: 4px;
+}
+
+.quantite {
+  width: 100px;
+  padding: 4px;
+}
+
+.categorie {
+  width: 120px;
+  padding: 4px;
+  margin: 5px;
+}
+
+.filtre {
+  width: 180px;
+  padding: 4px;
+  margin: 5px;
+}
+
+.ajouter {
+  background-color: #58968d;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.vider {
+  background-color: #58968d;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.trier {
+  background-color: #58968d;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.ajouter:hover {
+  background-color: #46756f;
+}
+
+.vider:hover {
+  background-color: #46756f;
+}
+
+.trier:hover {
+  background-color: #46756f;
+}
+
+.total {
+  font-weight: bold;
+  margin-left: 10%;
+  margin-bottom: 15px;
+}
+
+.liste {
+  max-width: 900px;
+  margin: auto;
+}
+
+.objet {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 15px 0;
+}
+
+.informatique {
+  background-color: #e5f9fc;
+}
+
+.mobilier {
+  background-color: #fff7e3;
+}
+
+.autre {
+  background-color: #f7ebfa;
+}
+
+.objet p {
+  margin: 5px 0;
+}
+
+.actions {
+  margin-top: 10px;
+}
+
+.plus {
+  background-color: #6ca6b7;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.supprimer {
+  background-color: #7b8c92;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.plus:hover {
+  background-color: #4f7b8a;
+}
+
+.supprimer:hover {
+  background-color: #5d6a6e;
+}

@@ -1,0 +1,31 @@
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f7fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.btn {
+  padding: 20px 40px;
+  font-size: 24px;
+  border-radius: 10px;
+  border: 1px solid #bdbdbd;
+  background: #ffffff;
+  cursor: not-allowed; 
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+}
+
+.btn.active {
+  background: #4caf50;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.btn.active:active {
+  transform: translateY(1px);
+}

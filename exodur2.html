@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestionnaire d'inventaire de bureau</title>
+  <link rel="stylesheet" href="css/exodur2.css" />
+  <script defer src="js/exodur2.js"></script>
+</head>
+<body>
+ 
+     <h1>Gestionnaire d'inventaire de bureau</h1>
+
+  <div class="barre">
+    <input type="text" class="nom" placeholder="Nom de l'objet">
+    <input type="number" class="quantite" placeholder="Quantité" min="1">
+    <select class="categorie">
+      <option value="autre">Autre</option>
+      <option value="informatique">Informatique</option>
+      <option value="mobilier">Mobilier</option>
+    </select>
+
+    <button class="ajouter">Ajouter</button>
+    <button class="vider">Vider l'inventaire</button>
+    <button class="trier">Trier par nom</button>
+
+    <select class="filtre">
+      <option value="tous">-- Filtrer par catégorie --</option>
+      <option value="informatique">Informatique</option>
+      <option value="mobilier">Mobilier</option>
+      <option value="autre">Autre</option>
+    </select>
+  </div>
+
+  <p class="total">Total : 0 objet</p>
+  <div class="liste"></div>
+</body>
+</html>
