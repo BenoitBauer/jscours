@@ -136,6 +136,71 @@ console.log(calculatePriceCart(panier))
           <button id="ajouter">Ajouter</button>
           <ul id="liste"></ul>
 
+          <h2>LES FONCTION FLECHEES</h2>
+          <p>Il existe une syntaxe plus simple et consise pour crer des fonctions, elle sont appeler "fonction flechées"</p>
+          <div id="wrapper">
+            <button id="btn-arrow">Test fonction fléchées</button>
+          </div>
+
+              <pre class="line-numbers">
+            <code class="language-javascript">
+              
+                  // FONCTION FLECHEES
+
+//function add(nbrA, nbrB){
+  //  return nbrA + nbrB
+// }
+
+let sum = (a, b) => a + b;
+console.log (sum (12, 15)) // = 27
+
+// Quand il y a qu'un seul parametre les parenthese sont facultatives
+
+let double = a => a * 2
+console.log (double (140))
+
+// fonction flechee en plusieur lignes
+
+let calc = (a, b, c) => {
+  let d = a * b;
+  let e = d - c;
+  return d - c;
+}
+
+console.log(calc(14, 2, 12))
+
+/// autre exemple
+
+let maj = str => str.toUpperCase ()
+console.log(maj("coucou"));
+
+// probleme avec this
+
+// exemple normal
+
+let arrow = () => {
+  document.addEventListener('click', () => {
+    console.log(this)
+  })
+}
+
+arrow();
+
+const btnArrow = document.getElementById("btn-arrow");
+
+btnArrow.addEventListener("click", () => {
+  console.log(this)
+})
+
+            </code>
+         </pre>
+
+         <h3>Conslusion sur les fonctions flécher</h3>
+         <ul>
+          <li>Pour : Utiliser les fonctions flécher pour les callback, les fonctions simple et les fonctions anonymes</li>
+          <li>Contre : Ne pas les utiliser quand qu'on à besoin du mot clé "this" et "constructor"</li>
+         </ul>
+
     </main>
     
 </body>

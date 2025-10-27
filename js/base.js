@@ -552,3 +552,92 @@ console.log(mot2)
 
 
 
+
+// Méthode itératrices
+
+const videoGames =['Mario', "Pandemoniom", "Gran Turismo", "Metal Gear", "Zelda", "Hollow Knight", "Rocket League"]
+const nbrIte =[5, 10, Math.PI, 19, 478, 255, 64712, 2.5, 47.899]
+//videoGames.forEach(videoGame => {
+   // console.log(videoGame)
+//})
+
+
+videoGames.forEach((videoGame, index) => {
+    console.log(`index ${index} : ${videoGame}`)
+})
+
+
+// .map
+// retourne un tableau apres transformation de chaque element
+
+const upper = videoGames.map(videoGames => videoGames.toUpperCase)
+console.log(upper);
+
+// retourne un tableau avec les valeurs à la puissance de deux
+
+const pow2 = nbrIte.map( n => n ** 2)
+console.log(pow2)
+
+// .filter
+// retourne un tableau avec uniquement les elements qui ont passer un test.
+
+// on recupere dans un tableau uniquement les nombres paires
+
+const even = nbrIte.filter(n => n % 2 === 0)
+console.log(even)
+
+//on recupere dans le tableau le nom des jeux qui commence par un m.
+
+const mGames = videoGames.filter(vg => vg.charAt(0).toLocaleLowerCase()==="m")
+console.log(mGames)
+
+// reduce
+// il accumule une valeur à partir des éléments du tableau
+
+const prices = [10, 15.75, 78, 12];
+const totalPrice = prices.reduce((acc, val) => acc + val, 0);
+console.log(totalPrice)
+
+// au debut acc = 0 
+// acc + val = 10
+// 10 + 15.75
+// 15.75 + 78
+// 103.75 + 12
+// 115.75
+
+
+
+// . find
+// retourne le PREMIER élément qui passe un test
+
+const users = [
+    {id: 1, nom:"Jean-Michel"},
+    {id: 2, nom:"Jean-Marcel"},
+    {id: 3, nom:"Jean-Marc"},
+    {id: 4, nom:"Jean-Eude"},
+    {id: 5, nom:"Jean-Kévin"},
+]
+
+// Je veux recuperer, le premier élément d'id 4
+
+const user = users.find( U => U.id === 4)
+console.log(user);
+
+
+// Some() et Every()
+
+// .some() => verifie qu'au moins un des elements du tableau satisfait la condition
+
+// .every => verifie que tout les elements du tableau satisfait la condition
+
+const nbrSome = [1, 5, 4, 74, 52356]
+const strEvery = ['Autruche', "Anne", "Anguille", "Alligator"]
+
+console.log(nbrSome.some(n => n % 2 === 0))
+console.log(nbrSome.every(n => n % 2 === 0))
+
+console.log(strEvery.every( s => s.charAt(0).toLocaleLowerCase() === "a"))
+
+
+
+

@@ -130,5 +130,51 @@ input.addEventListener("keypress", e => {
   }
 });
 
+// FONCTION FLECHEES
+
+//function add(nbrA, nbrB){
+  //  return nbrA + nbrB
+// }
+
+let sum = (a, b) => a + b;
+console.log (sum (12, 15)) // = 27
+
+// Quand il y a qu'un seul parametre les parenthese sont facultatives
+
+let double = a => a * 2
+console.log (double (140))
+
+// fonction flechee en plusieur lignes
+
+let calc = (a, b, c) => {
+  let d = a * b;
+  let e = d - c;
+  return d - c;
+}
+
+console.log(calc(14, 2, 12))
+
+/// autre exemple
+
+let maj = str => str.toUpperCase ()
+console.log(maj("coucou"));
+
+// probleme avec this
+
+// exemple normal
+
+let arrow = () => {
+  document.addEventListener('click', () => {
+    console.log(this)
+  })
+}
+
+arrow();
+
+const btnArrow = document.getElementById("btn-arrow");
+
+btnArrow.addEventListener("click", () => {
+  console.log(this)
+})
 
 
