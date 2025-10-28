@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/api.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-json.min.js"></script>
+    <title>Les api, les promises, les ajax</title>
+</head>
+<body>
+
+    <main>
+        <h1>API, JSON, PORPISE, AJAX</h1>
+        <h2>LES API</h2>
+        <p>API : Application Programming Interface</p>
+        <p>C'est une interface qui permet au moins à deux programmes ou services à communniquer entre elles</p>
+        <p>Exemple métaphorique : </p>
+        <ul>
+            <li>Tu est le <b>client</b> (le front end, cad le navigateur web)</li>
+            <li>Tu commande un plat</li>
+            <li>Le <b>cuisinier</b> le serveur du (backend) prepare</li>
+            <li>Le cuisinier prepare ke plat à partir du garde manger, (la base de données) dans le serveur API</li>
+            <li>L' <b>AJAX ou FLETCH</b> joue le role de garçon de restaurent : il prend ta commande, la transmet à la cuisine puis t'apporte le plat</li>
+        </ul>
+        <div class="img-api">
+            <img src="img/Image collée.png" alt="schéma de fonctionnement d'une api">
+        </div>
+
+        <h2>Le JSON</h2>
+        <p>Le JSON = JavaScript Object Notation</p>
+        <p>C'est un <b>format de données</b> léger, lisible humainement, utilisé pour <b>échanger des données</b> entre un serveur et une application web, ou entre deux application qui n'utiliseant pas le même language</p>
+        <p>A quoi sa sert ?</p>
+        <ul>
+            <li>Envoyer ou recevoir des données via une API</li>
+            <li>Stocker des données dans une fichier</li>
+            <li>Communiquer entre differente technologie (Java, PHP, Phython, Ruby, etc.....)</li>
+        </ul>
+
+                    <pre class="line-numbers">
+            <code class="language-json">
+               {
+                "nom": "Jean-Michel",
+                "age": 30,
+                "estActif": true,
+                "competences": ["HTML", "CSS", "JavaScript"]
+               }
+            </code>
+         </pre>
+
+         <h3>Structure</h3>
+         <ul>
+            <li>{} : objet</li>
+            <li>Un systeme comme les objet de clé : valeur</li>
+            <li>Les clés sont toujours entre guillemets</li>
+            <li>Les valeurs autorisées sont : <ul>
+                <li>String Jean-Michel</li>
+                <li>nombre 30</li>
+                <li>booléen true/fasle</li>
+                <li>tableau [ ]</li>
+                <li>objet { }</li>
+                <li>null</li>
+            </ul>
+            </li>
+         </ul>
+
+         <h3>JSON vs Objet JavaScript</h3>
+         <p>Attention ne pas confondre l'écriture d'un JSON avec un objet JS</p>
+
+                   <pre class="line-numbers">
+            <code class="language-json">
+               {
+                "data" : [0, 2, 456],
+                "owner" : "Hippolyte de la boucherie",
+                "admin" : false,
+                "employees" : null
+               }
+            </code>
+         </pre>
+
+                   <pre class="line-numbers">
+            <code class="language-javascript">
+              const user {
+                data : [0, 2, 456],
+                owner : "Hippolyte de la boucherie",
+                admin : false,
+                employees : null
+               };
+            </code>
+         </pre>
+
+         <p>Converstion JSON - Objet js</p>
+
+                  <pre class="line-numbers">
+            <code class="language-javascript">
+                // convertin un json en object en javascript
+
+// on va simuler un fichier JSON 
+
+const json = '{"nom" : "Jean-Michel", "age": 30}';
+// on convertis la string en JSON en objet javascript
+const obj = JSON.parse(json)
+console.log(obj.nom)
+
+// convertin un object javascript en JSON
+
+const user = {
+    nom : "Jean-Bon",
+    age : 12,
+}
+
+const jsonObj = JSON.stringify(user)
+console.log(jsonObj)
+            </code>
+         </pre>
+
+         <h2>Les promises</h2>
+         <p>Une <b>Promises</b> (une promesse) est un objet JS qui represente une <b>opération asynchrone </b> (c'est a dire qui ne se fait pas tout de suite)</p>
+         <p>Elle servent à éviter les "callback hells" ( des fonctions d'appel imbriquée entre elle de façon excessive)</p>
+         <p>L'enfer des rappels, aussi appelé "pryramide de la mort" est une situation où plusieurs rappels imbriquées sont utiliser pour gerer des operations asynchrone en JS. Cela se produit generalement lorsque plusieurs taches asynchrones dependent des resultats des autres.</p>
+         <p>Donc nous avons besoin des promesses pour améliorer la lisibilité des opérations asynchrones</p>
+         <p>Les promesses on trois états</p>
+         <ul>
+            <li>Resolve (reussite)</li>
+            <li>Rejected (échouer)</li>
+            <li>Pending (état d'attente)</li>
+         </ul>
+
+         <h2>LES AJAX !!!</h2>
+         <p>AJAX = asynchronous JavaScript And XML</p>
+         <p>A quoi sa sert ?</p>
+         <ul>
+            <li>A faire une requette HTTP sans recharger la page</li>
+            <li>Envoyer ou recevoir des données depuis un serveur API</li>
+            <li>Crée des application web dynamique, (ex, liste article, formulaire)</li>
+         </ul>
+         <p>Requtte HTTP => HyperText Transfer Protocol</p>
+         <p>C'est un protocol qui permet à un client , <b>votre navigateur</b> ou application de bureau, de communiquer avec un serveur web pour echanger des données ( HTML, JSON ou des images etc...)</p>
+         <img src="img/csm_diagram-of-http-communication-process-fr_bb0006610b.webp" alt="shema du protocol http">
+
+         <ul id="huge-list">
+
+         </ul>
+
+         <div id="aled">
+
+         </div>
+
+        
+    </main>
+    
+</body>
+</html>
