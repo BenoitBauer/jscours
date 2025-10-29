@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/blague.css">
+    <script defer src="js/blague.js"></script>
+    <title>Blagues multilingues</title>
+</head>
+<body>
+
+   <main>
+
+  <div class="controls">
+
+    <h1>😂 Blagues multilingues</h1>
+    <label for="language">Langue :</label>
+    <select id="language">
+      <option value="fr">🇫🇷 Français</option>
+      <option value="en">🇬🇧 Anglais</option>
+      <option value="de">🇩🇪 Allemand</option>
+      <option value="es">🇪🇸 Espagnol</option>
+      <option value="cs">🇨🇿 Tchèque</option>
+    </select>
+
+
+    <div style="margin-left: 40px;">
+      <label for="type">Type de blague :</label>
+      <select id="type">
+        <option value="any">Toutes</option>
+        <option value="single">1 phrase</option>
+        <option value="twopart">2 parties</option>
+      </select>
+    </div>
+
+
+    <fieldset class="filters">
+      <legend>Exclure :</legend>
+
+      <label><input type="checkbox" value="nsfw"> NSFW</label>
+      <label><input type="checkbox" value="religious"> Religion</label>
+      <label><input type="checkbox" value="political"> Politique</label>
+      <label><input type="checkbox" value="racist"> Racisme</label>
+      <label><input type="checkbox" value="sexist"> Sexisme</label>
+      <label><input type="checkbox" value="explicit"> Vulgaire</label>
+    </fieldset>
+
+
+    <label for="amount">Nombre :</label>
+    <select id="amount">
+      <option value="1">1 blague</option>
+      <option value="2">2 blagues</option>
+      <option value="3">3 blagues</option>
+    </select>
+
+    <button id="generate">Obtenir des blagues</button>
+
+  </div>
+
+  <div id="loader" class="hidden"></div>
+
+  <div id="jokes"></div>
+</main>
+
+
+  
+    
+</body>
+</html>
