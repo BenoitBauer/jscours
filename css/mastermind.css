@@ -74,16 +74,14 @@ button {
   gap: 20px;
 }
 
-/* historique (les anciennes lignes) */
 #history {
   display: flex;
-  flex-direction: column-reverse; /* la dernière tentative en haut */
+  flex-direction: column-reverse;
   gap: 8px;
   min-height: 350px;
   min-width: 190px;
 }
 
-/* feedback (pions noir/blanc) */
 #feedback {
   display: flex;
   flex-direction: column-reverse;
