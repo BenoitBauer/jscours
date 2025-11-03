@@ -1,4 +1,3 @@
-// JS PAS FINI – version élève
 const COLORS = ['red', 'green', 'blue', 'yellow', 'orange', 'purple'];
 
 const palette = document.getElementById('palette');
