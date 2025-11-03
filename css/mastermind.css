@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  background: #f4f4f4;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+main {
+  text-align: center;
+  margin-top: 30px;
+}
+
+h1 {
+  margin-bottom: 15px;
+}
+
+#palette {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.color-btn {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  cursor: pointer;
+}
+
+.color-btn.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.slot {
+  width: 32px;
+  height: 32px;
+  border: 2px dashed #999;
+  border-radius: 50%;
+  background: white;
+}
+
+.buttons {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 6px 14px;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.game-area {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* historique (les anciennes lignes) */
+#history {
+  display: flex;
+  flex-direction: column-reverse; /* la dernière tentative en haut */
+  gap: 8px;
+  min-height: 350px;
+  min-width: 190px;
+}
+
+/* feedback (pions noir/blanc) */
+#feedback {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 8px;
+  min-height: 350px;
+}
+
+.feedback-row {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.fb-pin {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #333;
+  background: white;
+}
+
+.fb-pin.black {
+  background: black;
+}
+
+.fb-pin.white {
+  background: white;
+  border: 2px solid black;
+}
+
+.history-row {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.history-slot {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #555;
+}
+
+#message {
+  margin-top: 15px;
+  font-weight: bold;
+}
